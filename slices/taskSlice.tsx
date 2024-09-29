@@ -28,7 +28,7 @@ export const postTasks = createAsyncThunk("tasks/postTasks", async (task: TaskSt
   const token = Cookies.get("task_token"); // Get the token from cookies
   const decodedToken = customJwtDecode(token as string); // Decode the JWT
   const id = decodedToken.userId; // Extract the userId
-  const response = await fetch(`/api/tasks/${id}`, {
+  const response = await fetch(`/tasks/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-type": "application/json",
@@ -47,7 +47,7 @@ export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
   const decodedToken = customJwtDecode(token as string); // Decode the JWT
   const id = decodedToken.userId; // Extract the userId
 
-  const response = await fetch(`/api/tasks/${id}`, {
+  const response = await fetch(`/tasks/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-type": "application/json",
@@ -64,7 +64,7 @@ export const deleteTask = createAsyncThunk("tasks/deleteTasks", async (tid: numb
   const token = Cookies.get("task_token"); // Get the token from cookies
   const decodedToken = customJwtDecode(token as string); // Decode the JWT
   const id = decodedToken.userId; // Extract the userId
-  const response = await fetch(`/api/tasks/${id}/${tid}`, {
+  const response = await fetch(`/tasks/${id}/${tid}`, {
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-type": "application/json",
@@ -81,7 +81,7 @@ export const patchTask = createAsyncThunk("tasks/updateTasks", async (task: Task
   const token = Cookies.get("task_token"); // Get the token from cookies
   const decodedToken = customJwtDecode(token as string); // Decode the JWT
   const id = decodedToken.userId; // Extract the userId
-  const response = await fetch(`/api/tasks/${id}/${task.id}`, {
+  const response = await fetch(`/tasks/${id}/${task.id}`, {
     method: "PATCH", // Use PATCH if necessary
     headers: {
       "Content-Type": "application/json",

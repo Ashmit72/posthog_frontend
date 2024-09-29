@@ -52,7 +52,7 @@ const Onboarding= ({showOnboarding,onComplete,fetchedId}:OnboardingProps) => {
       console.log(onboardObject,fetchedId);
       
       try {
-        const response=await fetch(`/api/onboard/${fetchedId}`,{
+        const response=await fetch(`/onboard/${fetchedId}`,{
           headers: {
             "Content-Type": "application/json",
           },

@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       // Proxy requests starting with /api to your backend server
-      '/api': {
-        target: 'https://13.233.168.114:8080', // Your backend URL
+      '/': {
+        target: 'https://13.233.168.114:8080',
         changeOrigin: true, // Needed for virtual hosted sites
         secure: false, // Set to false if you are using a self-signed certificate
         rewrite: (path) => path.replace(/^\/api/, ''), // Optional: Remove /api prefix
