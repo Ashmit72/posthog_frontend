@@ -1,0 +1,75 @@
+.experiment-container{
+    max-width: 90%;
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.experiment-container .experiment-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    /* background-color: magenta; */
+    width: 90%;
+}
+.experiment-todo-container{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.experiment-todo{
+    padding: 1rem;
+    min-height: 200px;
+    max-width: 400px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.experiment-todo h1{
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 1rem;
+}
+.experiment-todo p{
+    color: gray;
+    margin-bottom: 1rem;
+}
+#completed-checkbox{
+    position: absolute;
+    top: 0.5rem;
+    left:0;
+    z-index: 999;
+    cursor: pointer;
+}
+#edit-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    transform: scale(1.4);
+    cursor: pointer;
+    z-index: 999;
+    color: green;
+}
+#delete-icon{
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    z-index: 999;
+    cursor: pointer;
+    transform: scale(1.4);
+    color: red;
+}

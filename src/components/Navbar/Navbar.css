@@ -1,0 +1,26 @@
+nav{
+    max-width: 100vw;
+    background-color: darkslategray;
+    /* padding: 1rem; */
+    color: white;
+}
+nav .nav-container{
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-container a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+.nav-container .nav-items{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
